@@ -1,0 +1,61 @@
+Jun 5 10:23:45 myserver kernel: [ 123.456789] eth0: link up (1000Mbps/Full duplex)
+Jun 5 10:23:46 myserver sshd[1234]: Accepted publickey for john from 192.168.0.100 port 54321 ssh2: RSA SHA256:1234567890
+Jun 5 10:23:48 myserver CRON[5678]: (root) CMD (/usr/bin/php /var/www/cronjob.php)
+Jun 5 10:23:49 myserver postfix/smtpd[9876]: connect from mail.example.com[192.168.0.200]
+Jun 5 10:23:50 myserver postfix/smtpd[9876]: 1234567890: client=mail.example.com[192.168.0.200]
+Jun 5 10:23:51 myserver postfix/cleanup[9876]: 1234567890: message-id=<abcd1234@example.com>
+Jun 5 10:23:52 myserver postfix/qmgr[9876]: 1234567890: from=<john@example.com>, to=<jane@example.com>, size=1234, nrcpt=1 (queue active)
+Jun 5 10:23:53 myserver postfix/smtp[9876]: 1234567890: to=mail.example.com[192.168.0.200], relay=mail.example.com[192.168.0.200]:25, delay=1.5, delays=0.1/0.01/0.1/1.3, dsn=2.0.0, status=sent (250 OK)
+Jun 5 10:23:54 myserver postfix/qmgr[9876]: 1234567890: removed
+Jun 5 10:24:01 myserver CRON[5678]: (root) CMD (/usr/bin/php /var/www/cronjob.php)
+Jun 5 10:24:10 myserver kernel: [ 987.654321] CPU3: Core temperature above threshold, cpu clock throttled (total events = 5)
+Jun 5 10:24:10 myserver kernel: [ 987.654322] CPU1: Core temperature above threshold, cpu clock throttled (total events = 3)
+Jun 5 10:24:15 myserver postfix/smtpd[9876]: warning: hostname mail.example.com does not resolve to address 192.168.0.200: Name or service not known
+Jun 5 10:24:20 myserver postfix/smtpd[9876]: warning: hostname mail.example.com does not resolve to address 192.168.0.200: Temporary failure in name resolution
+Jun 5 10:24:20 myserver postfix/smtpd[9876]: connect from unknown[192.168.0.201]
+Jun 5 10:24:20 myserver postfix/smtpd[9876]: lost connection after EHLO from unknown[192.168.0.201]
+Jun 5 10:24:20 myserver postfix/smtpd[9876]: disconnect from unknown[192.168.0.201] ehlo=1 auth=0/1 commands=1/2
+Jun 5 10:24:25 myserver sshd[1234]: Received disconnect from 192.168.0.100 port 54321:11: disconnected by user
+Jun 5 10:24:25 myserver sshd[1234]: Disconnected from authenticating user john 192.168.0.100 port 54321 ssh2: RSA SHA256:1234567890
+Jun 5 10:24:30 myserver CRON[5678]: (root) CMD (/usr/bin/php /var/www/cronjob.php)
+Jun 5 10:24:35 myserver kernel: [ 123.456790] eth0: link down
+Jun 5 10:24:40 myserver postfix/smtpd[9876]: connect from mail.example.com[192.168.0.200]
+Jun 5 10:24:41 myserver postfix/smtpd[9876]: 0987654321: client=mail.example.com[192.168.0.200]
+Jun 5 10:24:42 myserver postfix/cleanup[9876]: 0987654321: message-id=<efgh5678@example.com>
+Jun 5 10:24:43 myserver postfix/qmgr[9876]: 0987654321: from=<jane@example.com>, to=<john@example.com>, size=5678, nrcpt=1 (queue active)
+Jun 5 10:24:44 myserver postfix/smtp[9876]: 0987654321: to=mail.example.com[192.168.0.200], relay=mail.example.com[192.168.0.200]:25, delay=1.5, delays=0.1/0.01/0.1/1.3, dsn=2.0.0, status=sent (250 OK)
+Jun 5 10:24:45 myserver postfix/qmgr[9876]: 0987654321: removed
+Jun 5 10:24:50 myserver sudo: john : TTY=pts/0 ; PWD=/home/john ; USER=root ; COMMAND=/usr/bin/apt-get update
+Jun 5 10:24:51 myserver sudo: pam_unix(sudo:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/0 ruser=john rhost=  user=john
+Jun 5 12:01:01 myserver CRON[1234]: (root) CMD (/usr/local/bin/backup.sh)
+Jun 5 12:01:01 myserver systemd[1]: Starting Clean up temporary directories...
+Jun 5 12:01:02 myserver systemd[1]: Started Clean up temporary directories.
+Jun 5 12:03:45 myserver kernel: [123456.789012] CPU2: Core temperature above threshold, cpu clock throttled (total events = 1)
+Jun 5 12:03:45 myserver kernel: [123456.789013] CPU2: Package temperature above threshold, cpu clock throttled (total events = 1)
+Jun 5 12:04:21 myserver sshd[5678]: Failed password for root from 192.168.0.100 port 54321 ssh2
+Jun 5 12:04:22 myserver sshd[5678]: Received disconnect from 192.168.0.100 port 54321: Too many authentication failures
+Jun 5 12:04:22 myserver sshd[5678]: Disconnected from authenticating user root 192.168.0.100 port 54321 ssh2
+Jun 5 12:05:01 myserver CRON[8765]: (www-data) CMD (/usr/bin/php /var/www/html/cron.php)
+Jun 5 12:05:02 myserver systemd[1]: Starting Daily system maintenance...
+Jun 5 12:05:02 myserver systemd[1]: Started Daily system maintenance.
+Jun 5 12:06:10 myserver kernel: [123456.789014] Out of memory: Kill process 9876 (java) score 500 or sacrifice child
+Jun 5 12:06:10 myserver kernel: [123456.789015] Killed process 9876 (java) total-vm:12345678kB, anon-rss:123456kB, file-rss:0kB, shmem-rss:0kB
+Jun 5 12:06:11 myserver systemd[1]: apache2.service: Main process exited, code=exited, status=1/FAILURE
+Jun 5 12:06:11 myserver systemd[1]: apache2.service: Failed with result 'exit-code'.
+Jun 5 12:06:11 myserver systemd[1]: apache2.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 5 12:06:11 myserver systemd[1]: apache2.service: Scheduled restart job, restart counter is at 1.
+Jun 5 12:06:11 myserver systemd[1]: Stopped The Apache HTTP Server.
+Jun 5 12:06:11 myserver systemd[1]: Starting The Apache HTTP Server...
+Jun 5 12:06:11 myserver systemd[1]: Started The Apache HTTP Server.
+Jun 5 12:07:35 myserver kernel: [123456.789016] ata1.00: exception Emask 0x0 SAct 0x0 SErr 0x0 action 0x6 frozen
+Jun 5 12:07:35 myserver kernel: [123456.789017] ata1.00: failed command: WRITE DMA
+Jun 5 12:07:35 myserver kernel: [123456.789018] ata1.00: cmd ca/00:08:00:00:00/00:00:00:00:00/e0 tag 0 dma 4096 out
+Jun 5 12:07:35 myserver kernel: [123456.789019] ata1.00: status: { DRDY ERR }
+Jun 5 12:07:35 myserver kernel: [123456.789020] ata1.00: error: { ICRC ABRT }
+Jun 5 12:07:35 myserver kernel: [123456.789021] ata1.00: failed command: WRITE DMA
+Jun 5 12:07:35 myserver kernel: [123456.789022] ata1.00: cmd ca/00:08:00:00:00/00:00:00:00:00/e0 tag 0 dma 4096 out
+Jun 5 12:07:35 myserver kernel: [123456.789023] ata1.00: status: { DRDY ERR }
+Jun 5 12:07:35 myserver kernel: [123456.789024] ata1.00: error: { ICRC ABRT }
+Jun 5 12:08:15 myserver NetworkManager[4321]: <info>  [wireless-devices]: disconnecting WiFi device wlan0
+Jun 5 12:08:15 myserver NetworkManager[4321]: <info>  [wireless-devices]: deactivating WiFi device wlan0
+Jun 5 12:08:16 myserver NetworkManager[4321]: <info> 
